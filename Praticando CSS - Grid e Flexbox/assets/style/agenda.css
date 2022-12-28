@@ -1,0 +1,55 @@
+.agenda {
+    display: grid;
+    margin-top: 1rem;
+}
+
+.agenda__titulo {
+    display: flex;
+}
+
+.agenda__item {
+    flex-grow: 1;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "imagem imagem"
+        "nome nome"
+        "data data"
+        "horario botao";
+}
+
+.agenda__item img {
+    grid-area: imagem;
+}
+
+.agenda__item h3 {
+    grid-area: nome;
+}
+
+.agenda__item h4 {
+    grid-area: data;
+}
+
+.agenda__item h5 {
+    grid-area: horario;
+}
+
+.agenda__item button {
+    grid-area: botao;
+}
+
+.agenda__lista {
+    column-gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+@media (min-width: 720px) {
+    .agenda__lista {
+        justify-content: end;
+    }
+}
